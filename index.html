@@ -8,202 +8,154 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        html, body {
-            background-color: #030712 !important;
-            margin: 0;
-            padding: 0;
-            color: #ffffff;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .main-wrapper { background-color: #030712 !important; min-height: 100vh; position: relative; }
-
-        .glass-nav {
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-        }
-
-        .text-gradient {
-            background: linear-gradient(to right, #22d3ee, #0891b2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stack-card {
-            background: #111827;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: 0.3s;
-        }
-
-        .tag {
-            background: #1f2937;
-            color: #d1d5db;
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 600;
-        }
-
-        .btn-view {
-            background: #06b6d4;
-            color: #000;
-            font-weight: 800;
-            padding: 10px 24px;
-            border-radius: 8px;
-            transition: 0.3s;
-            display: inline-block;
-        }
-
-        .btn-view:hover {
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .btn-working {
-            background: #1f2937;
-            color: #9ca3af;
-            font-weight: 800;
-            padding: 10px 24px;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #eab308;
-            border-radius: 50%;
-        }
+        body { background-color: #030712; color: #f3f4f6; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; scroll-behavior: smooth; }
+        .glass-nav { background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; }
+        .card-bg { background: #111827; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 16px; transition: 0.3s; }
+        .card-bg:hover { border-color: #06b6d4; transform: translateY(-3px); }
+        .text-gradient { background: linear-gradient(to right, #60a5fa, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-cyan { background: #06b6d4; color: #000; font-weight: 800; padding: 10px 24px; border-radius: 8px; transition: 0.3s; }
+        .btn-cyan:hover { box-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+        .tag { background: #1f2937; color: #9ca3af; padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 600; }
+        .progress-bar { height: 4px; border-radius: 2px; background: #1f2937; overflow: hidden; }
+        .progress-fill { height: 100%; background: #06b6d4; width: 75%; }
     </style>
 </head>
-<body>
-    <div class="main-wrapper overflow-x-hidden">
-        
-        <!-- Navbar -->
-        <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl">
-            <div class="glass-nav px-6 py-3 flex justify-between items-center">
-                <div class="flex items-center gap-2">
-                    <div class="bg-white/10 p-1.5 rounded-lg text-[10px] font-bold border border-white/10">PP</div>
-                    <span class="text-sm font-semibold tracking-wider uppercase">Pradeep Pal</span>
-                </div>
-                <div class="hidden md:flex gap-8 text-[11px] font-bold text-gray-500">
-                    <a href="#projects" class="hover:text-white transition uppercase">01. Projects</a>
-                    <a href="#stack" class="hover:text-white transition uppercase">02. Stack</a>
-                    <a href="Pradeep_Resume.pdf" target="_blank" class="hover:text-white transition uppercase text-cyan-400">03. Resume</a>
-                </div>
-                <a href="#contact" class="text-[10px] font-bold border border-white/20 px-4 py-1.5 rounded-full hover:bg-white hover:text-black transition">INITIALIZE_CHAT</a>
+<body class="p-4 md:p-0">
+
+    <!-- Navbar -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
+        <div class="glass-nav px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-[#1f2937] p-1 rounded font-bold text-[10px]">PP</div>
+                <span class="text-xs font-bold tracking-widest uppercase">Pradeep Pal</span>
             </div>
-        </nav>
-
-        <!-- Hero Section (Simplified for Focus) -->
-        <main class="max-w-6xl mx-auto pt-48 pb-10 px-6">
-             <div class="text-center md:text-left mb-20">
-                <h1 class="text-6xl md:text-7xl font-bold mb-4 tracking-tighter">Hi, I'm <span class="text-gradient">Pradeep Pal</span></h1>
-                <p class="text-gray-400 text-lg max-w-2xl">BCA Student | SDE Aspirant | GSoC 2026 Contributor</p>
-             </div>
-        </main>
-
-        <!-- Tech Stack Section -->
-        <section id="stack" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold">🚀 Tech Stack & Core Competencies</h2>
-                <p class="text-gray-500 text-xs font-bold uppercase tracking-widest mt-2">Verified Systems & Frameworks</p>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold text-gray-500 uppercase">
+                <a href="#projects" class="hover:text-white">Projects</a>
+                <a href="#stack" class="hover:text-white">Stack</a>
+                <a href="#activity" class="hover:text-white">Activity</a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="stack-card">
-                    <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">Languages</h4>
-                    <div class="flex gap-2 text-xl mb-4 text-blue-400"><i class="fab fa-python"></i> <span class="text-sm font-bold">C++ / C</span></div>
-                    <p class="text-[11px] text-gray-500 font-medium">Core logic & backend systems.</p>
-                </div>
-                <div class="stack-card">
-                    <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">Web Architecture</h4>
-                    <div class="flex gap-2 text-xl mb-4 text-cyan-400"><i class="fab fa-react"></i> <i class="fab fa-js"></i> <span class="text-sm font-bold">Django</span></div>
-                    <p class="text-[11px] text-gray-500 font-medium">Frontend & API development.</p>
-                </div>
-                <div class="stack-card">
-                    <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">Data Management</h4>
-                    <div class="flex gap-2 text-xl mb-4 text-white"><i class="fas fa-database"></i> <span class="text-sm font-bold">PostgreSQL</span></div>
-                    <p class="text-[11px] text-gray-500 font-medium">Relational DB & SQL optimization.</p>
-                </div>
-                <div class="stack-card">
-                    <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">DevOps & Tools</h4>
-                    <div class="flex gap-2 text-xl mb-4 text-orange-500"><i class="fab fa-git-alt"></i> <i class="fab fa-github text-white"></i></div>
-                    <p class="text-[11px] text-gray-500 font-medium">Version control & CLI automation.</p>
-                </div>
+            <a href="#contact" class="text-[10px] font-bold border border-gray-700 px-4 py-2 rounded-lg hover:bg-white hover:text-black transition uppercase">> Initialize_Chat</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto pt-40 pb-20 px-6 flex flex-col md:flex-row items-center gap-12">
+        <div class="relative w-64 h-72 card-bg p-2 overflow-hidden">
+            <img src="pradeep.png.jpeg" alt="Pradeep" class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition duration-500">
+        </div>
+        <div class="flex-1 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-cyan-950/30 border border-cyan-500/30 px-3 py-1 rounded-full mb-6">
+                <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></span>
+                <span class="text-[9px] font-bold text-cyan-400 uppercase tracking-widest">Building for the future</span>
             </div>
-        </section>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 tracking-tighter">Hi, I'm <span class="text-gradient">Pradeep Pal</span></h1>
+            <p class="text-gray-400 text-lg max-w-2xl mb-8 leading-relaxed">
+                Aspiring <strong class="text-white">SDE Student</strong> from Pratapgarh. Specialized in 
+                <span class="text-cyan-400">Full Stack & Systems</span>. Currently targeting 
+                <strong class="text-white font-semibold">GSoC 2026</strong>.
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="#contact" class="btn-cyan">Let's Talk</a>
+                <a href="https://github.com/pradeeep-pal" target="_blank" class="border border-white/10 px-8 py-3 rounded-lg text-xs font-bold hover:bg-white/5 transition uppercase"></> View Code</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- Projects Dashboard -->
-        <section id="projects" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
-            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
-                🚀 Projects Dashboard
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project 1: Omni Eye -->
-                <div class="stack-card">
-                    <h3 class="text-xl font-bold mb-3 flex items-center gap-3">
-                        <i class="fas fa-eye text-blue-400"></i> Omni Eye
-                    </h3>
-                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">Advanced Missing Person Detection System using MediaPipe and OpenCV with 128-d face encodings.</p>
-                    <div class="flex gap-2 mb-8">
-                        <span class="tag">Python</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">MediaPipe</span>
-                    </div>
-                    <a href="https://github.com/pradeeep-pal" target="_blank" class="btn-view">View Code</a>
-                </div>
+    <!-- Tech Stack -->
+    <section id="stack" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+        <h2 class="text-2xl font-bold mb-10 italic">🚀 Tech Stack & Competencies</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="card-bg p-6">
+                <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">Languages</h4>
+                <div class="flex gap-3 text-xl mb-4"><i class="fab fa-python text-blue-400"></i> <span class="text-xs font-bold">C++ / C</span></div>
+                <p class="text-[10px] text-gray-500">Core logic & backend.</p>
+            </div>
+            <div class="card-bg p-6">
+                <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">Web Architecture</h4>
+                <div class="flex gap-3 text-xl mb-4"><i class="fab fa-react text-cyan-400"></i> <span class="text-xs font-bold">Django / JS</span></div>
+                <p class="text-[10px] text-gray-500">Full-stack apps.</p>
+            </div>
+            <div class="card-bg p-6">
+                <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">AI & Computer Vision</h4>
+                <div class="flex gap-3 text-xl mb-4"><i class="fas fa-eye text-white"></i> <span class="text-xs font-bold">OpenCV / MediaPipe</span></div>
+                <p class="text-[10px] text-gray-500">Omni Eye engine.</p>
+            </div>
+            <div class="card-bg p-6">
+                <h4 class="text-cyan-500 text-[10px] font-bold uppercase mb-4 tracking-widest">DevOps</h4>
+                <div class="flex gap-3 text-xl mb-4"><i class="fab fa-git-alt text-orange-500"></i> <i class="fab fa-github"></i></div>
+                <p class="text-[10px] text-gray-500">CI/CD & Automation.</p>
+            </div>
+        </div>
+    </section>
 
-                <!-- Project 2: BCA LMS -->
-                <div class="stack-card">
-                    <h3 class="text-xl font-bold mb-3 flex items-center gap-3">
-                        <i class="fas fa-graduation-cap text-cyan-400"></i> BCA LMS Portal
-                    </h3>
-                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">Learning Management System designed for BCA students to manage semester courses and resources.</p>
-                    <div class="flex gap-2 mb-8">
-                        <span class="tag">Django</span>
-                        <span class="tag">React.js</span>
-                        <span class="tag">PostgreSQL</span>
-                    </div>
-                    <a href="https://github.com/pradeeep-pal" target="_blank" class="btn-view">View Code</a>
-                </div>
-
-                <!-- Project 3: Working/Upcoming -->
-                <div class="stack-card">
-                    <h3 class="text-xl font-bold mb-3 flex items-center gap-3">
-                        <i class="fas fa-robot text-gray-400"></i> GSoC Automation
-                    </h3>
-                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">AI-powered tool to track open-source contributions and mentor interactions for GSoC 2026.</p>
-                    <div class="flex gap-2 mb-8">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">AI</span>
-                    </div>
-                    <div class="btn-working">
-                        <span class="status-dot animate-pulse"></span> Working...
-                    </div>
+    <!-- Projects Dashboard -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+        <h2 class="text-2xl font-bold mb-10 italic">🚀 Projects Dashboard</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card-bg p-8">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-3"><i class="fas fa-shield-alt text-blue-400"></i> Omni Eye</h3>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">Missing person detection using 128-d face encodings.</p>
+                <div class="flex gap-2 mb-8"><span class="tag">Python</span><span class="tag">OpenCV</span></div>
+                <a href="#" class="btn-cyan">View Code</a>
+            </div>
+            <div class="card-bg p-8">
+                <h3 class="text-xl font-bold mb-3 flex items-center gap-3 text-gray-400"><i class="fas fa-graduation-cap text-gray-500"></i> BCA LMS</h3>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">Complete course platform for BCA students.</p>
+                <div class="flex gap-2 mb-8"><span class="tag">Django</span><span class="tag">React</span></div>
+                <div class="bg-[#1f2937] inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold text-yellow-500">
+                    <span class="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></span> Working...
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="max-w-4xl mx-auto px-6 py-32 text-center">
-            <h2 class="text-4xl font-bold mb-12 tracking-tight">Ready to <span class="text-gradient">Collaborate?</span></h2>
-            <form action="https://formspree.io/f/xbdwjnak" method="POST" class="flex flex-col gap-4 max-w-md mx-auto">
-                <input type="email" name="email" placeholder="Your Email Address" required class="bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-sm focus:border-cyan-400 outline-none">
-                <textarea name="message" placeholder="How can I help you?" required class="bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-sm h-32 focus:border-cyan-400 outline-none"></textarea>
-                <button type="submit" class="bg-white text-black font-bold px-10 py-4 rounded-xl text-xs uppercase tracking-widest hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition">Send Message</button>
-            </form>
-        </section>
+    <!-- Milestones & Recognition -->
+    <section class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+        <h2 class="text-2xl font-bold mb-10 italic">🏆 Milestones & Recognition</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="card-bg p-6 flex justify-between items-center">
+                <div>
+                    <h4 class="font-bold text-sm">GSoC 2026 Aspirant</h4>
+                    <p class="text-[10px] text-gray-500">INCF & Brian 2 Simulator</p>
+                </div>
+                <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">Active</span>
+            </div>
+            <div class="card-bg p-6 flex justify-between items-center">
+                <div>
+                    <h4 class="font-bold text-sm">BCA 2nd Year Scholar</h4>
+                    <p class="text-[10px] text-gray-500">Pt. Sukhraj Raghunathi Institute</p>
+                </div>
+                <span class="text-green-400 text-xs font-bold uppercase tracking-widest">Honors</span>
+            </div>
+        </div>
+    </section>
 
-        <footer class="py-10 text-center border-t border-white/5">
-            <p class="text-[10px] font-bold text-gray-600 uppercase tracking-[0.5em]">© 2026 PRADEEP PAL | PRATAPGARH</p>
-        </footer>
-    </div>
+    <!-- Development Activity -->
+    <section id="activity" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/5">
+        <h2 class="text-2xl font-bold mb-10 italic">📊 Development Activity</h2>
+        <div class="card-bg p-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div><h3 class="text-3xl font-bold text-cyan-400">1.1k+</h3><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">Commits</p></div>
+                <div><h3 class="text-3xl font-bold text-white">22</h3><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">Repositories</p></div>
+                <div><h3 class="text-3xl font-bold text-white">12</h3><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">Open Source</p></div>
+                <div><h3 class="text-3xl font-bold text-cyan-400">450+</h3><p class="text-[10px] text-gray-500 uppercase font-bold mt-1">Total Stars</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-32 text-center">
+        <h2 class="text-4xl font-bold mb-12">Ready to <span class="text-gradient">Collaborate?</span></h2>
+        <form action="https://formspree.io/f/xbdwjnak" method="POST" class="flex flex-col gap-4 max-w-md mx-auto">
+            <input type="email" name="email" placeholder="Email Address" required class="bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-sm outline-none focus:border-cyan-400">
+            <textarea name="message" placeholder="Your Message" required class="bg-white/5 border border-white/10 px-5 py-4 rounded-xl text-sm h-32 outline-none focus:border-cyan-400"></textarea>
+            <button type="submit" class="bg-white text-black font-bold py-4 rounded-xl text-xs uppercase tracking-widest hover:shadow-xl transition">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5 text-[9px] text-gray-600 uppercase tracking-widest">
+        © 2026 PRADEEP PAL | PRATAPGARH
+    </footer>
+
 </body>
 </html>

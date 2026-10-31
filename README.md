@@ -1,8 +1,8 @@
 # 🛡️ Aryabhatt | Cybersecurity Learner & Full Stack Developer
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=arybhatt4533&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00F7FF&text_color=9ca3af&icon_color=00F7FF" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=arybhatt4533&theme=tokyonight&hide_border=true&background=0d1117&ring=00F7FF&fire=00F7FF&currStreakNum=00F7FF" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Pradeeep-pal&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00F7FF&text_color=9ca3af&icon_color=00F7FF" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Pradeeep-pale=tokyonight&hide_border=true&background=0d1117&ring=00F7FF&fire=00F7FF&currStreakNum=00F7FF" alt="GitHub Streak" />
 </div>
 
 ---
@@ -36,10 +36,10 @@
 
 <div align="center">
   <p>“Code. Contribute. Collaborate.”</p>
-  <a href="mailto:bhattarya4533@gmail.com">
+  <a href="mailto:ppal39932@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://github.com/arybhatt4533">
+  <a href="https://github.com/Pradeeep-pal">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </div>

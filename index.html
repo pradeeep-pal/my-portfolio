@@ -1,303 +1,92 @@
 <!DOCTYPE html>
-<html lang="hi">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arya Bhatt | CyberSec & Full Stack</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;900&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            scroll-behavior: smooth;
-        }
-
-        .mono {
-            font-family: 'Fira Code', monospace;
-        }
-
-        .cyber-border {
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .cyber-border:hover {
-            border-color: #00F7FF;
-            box-shadow: 0 0 20px rgba(0, 247, 255, 0.1);
-        }
-
-        .hero-gradient {
-            background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
-        }
-    </style>
+    <title>Pradeep Pal - Portfolio</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Background Animation Elements -->
+    <div class="ambient-background" aria-hidden="true">
+        <span class="ambient-orb orb-one"></span>
+        <span class="ambient-orb orb-two"></span>
+        <span class="ambient-orb orb-three"></span>
+        <span class="ambient-orb orb-four"></span>
+        <span class="ambient-ring ring-one"></span>
+        <span class="ambient-ring ring-two"></span>
+        <span class="ambient-spark spark-one"></span>
+        <span class="ambient-spark spark-two"></span>
+        <span class="ambient-spark spark-three"></span>
+        <span class="ambient-spark spark-four"></span>
+        <span class="ambient-spark spark-five"></span>
+        <span class="ambient-spark spark-six"></span>
+        <span class="ambient-comet comet-one"></span>
+        <span class="ambient-comet comet-two"></span>
+        <span class="ambient-comet comet-three"></span>
+    </div>
 
-    <header class="w-full">
-        <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,30:0f2027,70:203a43,100:2c5364&height=200&section=header&text=Arya%20Bhatt&fontSize=70&fontColor=00F7FF&animation=fadeIn&fontAlignY=38&desc=Full%20Stack%20Developer%20|%20Cybersecurity%20Learner&descAlignY=60&descSize=20&descColor=ffffff"
-            alt="Header" class="w-full">
+    <!-- Header Navigation -->
+    <header class="header">
+        <a href="#home" class="logo">Pradeep Pal</a>
+        <button class="menu-button" id="menu-icon" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar" id="navigation">
+            <a href="#home">Home</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experiences">Achievements</a>
+            <a href="#experiences">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section class="max-w-5xl mx-auto px-6 py-16">
-        <div class="flex flex-col md:flex-row items-center gap-10">
-            <div class="flex-shrink-0">
-                <div
-                    class="rounded-2xl overflow-hidden p-1 bg-transparent ring-2 ring-cyan-400/30 ring-offset-2 ring-offset-[#0d1117] shadow-[0_8px_30px_rgba(0,247,255,0.06)] w-48 h-48 md:w-64 md:h-64">
-                    <div class="w-full h-full rounded-2xl border-2 border-[#30363d] bg-cover bg-center"
-                        style="background-image: url('my-pic.jpeg'), url('https://via.placeholder.com/250?text=Arya+Bhatt');">
-                    </div>
-                </div>
-            </div>
-            <div class="flex-1 text-center md:text-left">
-                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-100">
-                    <span class="text-cyan-400">Arya Bhatt</span> | Cybersecurity Learner
-                </h1>
-
-                <div class="mt-4">
-                    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=00F7FF&center=false&vCenter=true&width=520&lines=Python+%26+Java+Expert;Open+Source+Contributor;Cybersecurity+Enthusiast;GSoC+2026+Aspirant"
-                        alt="Typing SVG" class="mx-auto md:mx-0">
-                </div>
-
-                <p class="mt-6 text-gray-400 text-lg leading-relaxed">
-                    Main software develop karne aur security vulnerabilities explore karne ka shauk rakhta hoon.
-                    Currently
-                    focusing on <span class="text-cyan-400">GSoC 2026</span> aur building scalable solutions.
+    <main>
+        <!-- Home / Hero Section -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hello, my name is</h3>
+                <h1>Pradeep Pal</h1>
+                <h3>I'm an aspiring <span class="multiple-text" id="typing-text">Full-Stack Developer</span></h3>
+                <p>
+                    BCA student, full-stack developer, and open-source contributor based in Pratapgarh, Uttar Pradesh.
+                    I build web applications and enjoy solving data structures and algorithms challenges.
                 </p>
-
-                <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="mailto:bhattarya4533@gmail.com"
-                        class="bg-cyan-500 text-black px-6 py-2 rounded-lg font-bold hover:bg-cyan-400 transition">Email
-                        Me</a>
-                    <a href="#projects"
-                        class="border border-[#30363d] px-6 py-2 rounded-lg font-bold hover:bg-[#161b22] transition">View
-                        Projects</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-5xl mx-auto px-6 py-12">
-        <h3 class="text-xl font-bold mb-8 text-center text-gray-100">🔥 Verified Skill Trophies</h3>
-        <div class="p-6 bg-[#161b22] rounded-2xl border border-[#30363d] flex justify-center">
-            <img src="https://skillicons.dev/icons?i=git,github,visualstudio,bash,flask,python,java,mysql,c,cpp,html,css,js&perline=13"
-                alt="Skills" class="max-w-full">
-        </div>
-    </section>
-
-    <section id="projects" class="max-w-5xl mx-auto px-6 py-12">
-        <h3 class="text-2xl font-black mb-10 flex items-center gap-2">
-            <span class="text-cyan-400">🚀</span> Projects Dashboard
-        </h3>
-
-        <div class="grid gap-6 md:grid-cols-2">
-            <!-- Project Card 1 -->
-            <article class="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/6 shadow-lg">
-                <h4 class="text-cyan-400 font-bold text-lg mb-2">👁️ Omni-Eye</h4>
-                <p class="text-gray-300 text-sm mb-4">AI Surveillance using face recognition.<br>Real-time detection
-                    with OpenCV.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 bg-[#0b1116] text-xs rounded text-gray-300">Python</span>
-                    <span class="px-2 py-1 bg-[#0b1116] text-xs rounded text-gray-300">AI</span>
-                    <span class="px-2 py-1 bg-[#0b1116] text-xs rounded text-gray-300">OpenCV</span>
-                </div>
-                <div class="flex gap-3">
-                    <a href="https://github.com/arybhatt4533" target="_blank" rel="noopener"
-                        class="px-4 py-2 bg-cyan-500 text-black rounded font-bold hover:bg-cyan-400">View Code</a>
-                    <a href="#" class="px-4 py-2 border border-white/10 text-gray-200 rounded hover:bg-white/5">Live
-                        Demo</a>
-                </div>
-            </article>
-
-            <!-- Project Card 2 -->
-            <article class="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/6 shadow-lg">
-                <h4 class="text-cyan-400 font-bold text-lg mb-2">🛰️ STDAMS</h4>
-                <p class="text-gray-300 text-sm mb-4">Satellite anomaly detection system.<br>Data pipelines and ML
-                    models.</p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-2 py-1 bg-[#0b1116] text-xs rounded text-gray-300">Python</span>
-                    <span class="px-2 py-1 bg-[#0b1116] text-xs rounded text-gray-300">ML</span>
-                    <span class="px-2 py-1 bg-[#0b1116] text-xs rounded text-gray-300">Dataviz</span>
-                </div>
-                <div class="flex gap-3">
-                    <a href="https://github.com/arybhatt4533/STDAMS-New" target="_blank" rel="noopener"
-                        class="px-4 py-2 bg-cyan-500 text-black rounded font-bold hover:bg-cyan-400">View Code</a>
-                    <a href="#" class="px-4 py-2 border border-white/10 text-gray-200 rounded hover:bg-white/5">Live
-                        Demo</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="max-w-5xl mx-auto px-6 py-12">
-        <div class="p-8 bg-[#0d1117] rounded-2xl border border-[#30363d] relative overflow-hidden group">
-            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                <code class="text-xs text-cyan-400">root@kali:~# nmap -sV target</code>
+                <a href="Pradeep%20resume.pdf" class="btn" download="Pradeep resume.pdf">
+                    <i class="fas fa-download" aria-hidden="true"></i> Download CV
+                </a>
             </div>
 
-            <h3 class="text-xl font-bold mb-8 flex items-center gap-3 text-white">
-                <span class="p-2 bg-blue-500/10 rounded-lg border border-blue-500/20">
-                    <img src="https://img.shields.io/badge/Kali-Linux-blue?style=flat&logo=kali-linux&logoColor=white"
-                        alt="Kali" class="h-5">
-                </span>
-                🛡️ Tech Capabilities
-            </h3>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div
-                    class="p-4 rounded-xl bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 transition shadow-sm">
-                    <div class="text-cyan-400 mb-3 text-xl">🔍</div>
-                    <h4 class="text-sm font-bold text-gray-200 mb-1">Network Scanning</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">Nmap scanning aur vulnerability assessment mein
-                        proficiency.</p>
-                </div>
-
-                <div
-                    class="p-4 rounded-xl bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 transition shadow-sm">
-                    <div class="text-cyan-400 mb-3 text-xl">🐧</div>
-                    <h4 class="text-sm font-bold text-gray-200 mb-1">Linux & Scripting</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">Kali Linux terminal aur Bash scripting mein
-                        comfortable experience.</p>
-                </div>
-
-                <div
-                    class="p-4 rounded-xl bg-[#161b22] border border-[#30363d] hover:border-cyan-500/50 transition shadow-sm">
-                    <div class="text-cyan-400 mb-3 text-xl">📂</div>
-                    <h4 class="text-sm font-bold text-gray-200 mb-1">Database Mastery</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed">Efficient SQL queries likhne aur database
-                        management mein expertise.</p>
-                </div>
+            <!-- Profile Image -->
+            <div class="home-img">
+                <img src="IMG_20261031_114052.png" alt="Pradeep Pal">
             </div>
-        </div>
-    </section>
-    <section class="max-w-5xl mx-auto px-6 py-12">
-        <div class="p-8 bg-[#0d1117] rounded-2xl border border-[#30363d] shadow-xl">
-            <h3 class="text-2xl font-bold mb-10 flex items-center gap-3 text-white">
-                <span class="p-2 bg-yellow-500/10 rounded-lg border border-yellow-500/20 text-yellow-500">
-                    🏆
-                </span>
-                Achievements & Certifications
-            </h3>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div
-                    class="group flex items-start gap-4 p-5 rounded-xl bg-[#161b22] border border-blue-500/30 hover:border-blue-500/60 transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.05)]">
-                    <div class="text-3xl group-hover:scale-110 transition duration-300">🏅</div>
-                    <div>
-                        <h4 class="font-bold text-gray-100 group-hover:text-blue-400 transition">General Knowledge
-                            Excellence</h4>
-                        <p class="text-sm text-gray-400 mt-2 leading-relaxed">Honored with a **Medal** for outstanding
-                            performance in General Knowledge competitions.</p>
-                        <div class="mt-3 flex items-center gap-2">
-                            <span
-                                class="px-2 py-0.5 bg-blue-500/10 text-blue-400 text-[10px] font-bold rounded uppercase tracking-wider border border-blue-500/20">Medalist</span>
-                        </div>
+        <!-- Education Section -->
+        <section class="education" id="education">
+            <h2 class="heading">Education</h2>
+            <div class="education-container">
+                <div class="education-box">
+                    <div class="skill-icon">
+                        <i class="bx bxs-graduation" aria-hidden="true"></i>
                     </div>
-                </div>
-
-                <div
-                    class="group flex items-start gap-4 p-5 rounded-xl bg-[#161b22] border border-purple-500/30 hover:border-purple-500/60 transition-all duration-300 shadow-[0_0_15px_rgba(168,85,247,0.1)]">
-                    <div class="text-3xl group-hover:scale-110 transition duration-300">🏆</div>
-                    <div>
-                        <h4 class="font-bold text-gray-100 group-hover:text-purple-400 transition">Computer Fundamentals
-                            Quiz</h4>
-                        <p class="text-sm text-gray-400 mt-2 leading-relaxed">Secured **Top 10 Rank** & Trophy Winner at
-                            the college level.</p>
-                        <div class="mt-3 flex items-center gap-2">
-                            <span
-                                class="px-2 py-0.5 bg-purple-500/10 text-purple-400 text-[10px] font-bold rounded uppercase tracking-wider border border-purple-500/20">Trophy
-                                Winner</span>
-                            <span class="text-xs text-gray-500 font-mono">2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="group flex items-start gap-4 p-5 rounded-xl bg-[#161b22] border border-[#30363d] hover:border-yellow-500/40 transition-all duration-300">
-                    <div class="text-3xl group-hover:scale-110 transition duration-300">🎖️</div>
-                    <div>
-                        <h4 class="font-bold text-gray-100 group-hover:text-yellow-400 transition">UHack 4.0 National
-                            Hackathon</h4>
-                        <p class="text-sm text-gray-400 mt-2 leading-relaxed">Certificate of Merit for 24-hour prototype
-                            development at a national level.</p>
-                        <div class="mt-3 flex items-center gap-2">
-                            <span
-                                class="px-2 py-0.5 bg-yellow-500/10 text-yellow-500 text-[10px] font-bold rounded uppercase tracking-wider border border-yellow-500/20">Feb
-                                2026</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="group flex items-start gap-4 p-5 rounded-xl bg-[#161b22] border border-[#30363d] hover:border-orange-500/40 transition-all duration-300">
-                    <div class="text-3xl group-hover:scale-110 transition duration-300">💡</div>
-                    <div>
-                        <h4 class="font-bold text-gray-100 group-hover:text-orange-400 transition">LeetCode Proficiency
-                        </h4>
-                        <p class="text-sm text-gray-400 mt-2 leading-relaxed">Solved 200+ problems in C++ focusing on
-                            complex DSA.</p>
-                        <div class="mt-3 flex items-center gap-2">
-                            <span
-                                class="px-2 py-0.5 bg-orange-500/10 text-orange-400 text-[10px] font-bold rounded uppercase tracking-wider border border-orange-500/20">Ongoing</span>
-                        </div>
-                    </div>
+                    <h3>Bachelor of Computer Applications</h3>
+                    <span class="education-year">September 2024 – Present</span>
+                    <p>
+                        Pursuing a Bachelor of Computer Applications at Pt. Sukhraj Raghunathi Institute of
+                        Education &amp; Technology in Pratapgarh, Uttar Pradesh (Prof. Rajendra Singh University).
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="max-w-5xl mx-auto px-6 py-12">
-        <div class="p-8 bg-[#0d1117] rounded-2xl border border-[#30363d] shadow-xl relative overflow-hidden">
-            <div class="absolute -top-24 -left-24 w-48 h-48 bg-cyan-500/10 blur-[100px]"></div>
+        </section>
 
-            <h3 class="text-xl font-bold mb-8 flex items-center gap-3 text-white">
-                <span class="p-2 bg-cyan-500/10 rounded-lg border border-cyan-500/20 text-cyan-400">
-                    📊
-                </span>
-                Development Activity
-            </h3>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-items-center">
-                <div
-                    class="w-full p-2 bg-[#161b22] rounded-xl border border-[#30363d] hover:border-cyan-500/30 transition shadow-lg">
-                    <img src="https://github-readme-stats.vercel.app/api?username=arybhatt4533&show_icons=true&theme=tokyonight&hide_border=true&bg_color=161b22&title_color=00F7FF&text_color=9ca3af&icon_color=00F7FF"
-                        alt="GitHub Stats" class="w-full h-auto rounded-lg">
-                </div>
-
-                <div
-                    class="w-full p-2 bg-[#161b22] rounded-xl border border-[#30363d] hover:border-orange-500/30 transition shadow-lg">
-                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=arybhatt4533&theme=tokyonight&hide_border=true&background=161b22&ring=FF9D00&fire=FF9D00&currStreakNum=00F7FF"
-                        alt="GitHub Streak" class="w-full h-auto rounded-lg">
-                </div>
-            </div>
-
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="p-4 rounded-lg bg-[#0d1117] border border-[#30363d] text-center">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">LeetCode</p>
-                    <p class="text-lg font-bold text-orange-400">200+ Solved</p>
-                </div>
-                <div class="p-4 rounded-lg bg-[#0d1117] border border-[#30363d] text-center">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Open Source</p>
-                    <p class="text-lg font-bold text-cyan-400">12+ Contributions</p>
-                </div>
-                <div class="p-4 rounded-lg bg-[#0d1117] border border-[#30363d] text-center">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Experience</p>
-                    <p class="text-lg font-bold text-purple-400">AI Workshop (Noida)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="py-20 text-center border-t border-[#30363d] mt-10">
-        <h3 class="font-bold text-gray-400 mb-6 text-xl">🤝 Let's Connect</h3>
-        <div class="flex justify-center">
-            <a href="bhatt_resume.pdf" download="Aryabhatt_Resume.pdf"
-                class="bg-cyan-500 text-black px-8 py-3 rounded-lg font-bold hover:bg-cyan-400 transition flex items-center gap-2">
-                📄 Download Resume
-            </a>
-        </div>
-        <p class="mt-10 text-xs text-gray-500 mono">⭐ “Developed by Arya Bhatt”</p>
-    </footer>
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h2 class="heading">Skills &amp; Expertise</h2>
+            <p class="skills-intro">Self-assessed proficiency across my current technical and

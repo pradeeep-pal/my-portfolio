@@ -1,4 +1,4 @@
-# 🛡️ Aryabhatt | Cybersecurity Learner & Full Stack Developer
+# 🛡️ Pradeep pal| Cybersecurity Learner & Full Stack Developer
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Pradeeep-pal&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00F7FF&text_color=9ca3af&icon_color=00F7FF" alt="GitHub Stats" />
@@ -29,8 +29,6 @@
 
 ### 🏆 Achievements
 - **🎖️ UHack 4.0**: Certificate of Merit (National Level).
-- **🏆 College Trophy**: Top 10 Rank in Computer Fundamentals Quiz.
-- **🏅 GK Medalist**: Honored for excellence in General Knowledge.
 
 ---
 
